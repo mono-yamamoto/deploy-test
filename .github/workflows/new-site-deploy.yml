@@ -19,6 +19,6 @@ jobs:
           server: ${{ secrets.SERVER }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          local-dir: new/htdocs/
+          local-dir: ./
           server-dir: /yyd_04/
 
