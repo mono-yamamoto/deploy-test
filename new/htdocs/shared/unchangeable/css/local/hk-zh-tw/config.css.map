@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAmB;AAOnB;qDACqD;AC0BnD,2EAA+B;EAE7B,GAAG,EAAE,IAAI;;AAMX,+DAAiB;EAEf,GAAG,EAAE,IAAI;;;ADrBb;qDACqD;AAMrD;qDACqD",
+"sources": ["../../../scss/local/hk-zh-tw/config.scss","../../../scss/local/hk-zh-tw/_gnavi.scss"],
+"names": [],
+"file": "config.css"
+}

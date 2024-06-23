@@ -1,0 +1,19 @@
+/* Scss Document */
+/* ALL
+-------------------------------------------------- */
+#header,
+.sp .header {
+  border-bottom: 1px solid #e3e3e3;
+  box-sizing: border-box;
+}
+
+.sp #header {
+  border-bottom: none;
+}
+
+/* SP
+-------------------------------------------------- */
+/* PC
+-------------------------------------------------- */
+
+/*# sourceMappingURL=config.css.map */

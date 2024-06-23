@@ -1,0 +1,66 @@
+/* Scss Document */
+/* ALL
+-------------------------------------------------- */
+#main,
+.breadcrumb {
+  background: #fff;
+}
+
+.news {
+  margin-top: 105px;
+}
+
+.container .row .internal-link-panel {
+  margin: 60px 0 0;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.container .row .internal-link-panel li {
+  width: 32%;
+  margin: 0 2% 0 0;
+  padding: 0;
+}
+.container .row .internal-link-panel li:last-of-type {
+  margin-right: 0;
+}
+.container .row .internal-link-panel li a {
+  background: #fff;
+}
+.container .row.link-selector {
+  display: none;
+  font-size: 1.6rem;
+  text-align: right;
+  padding-right: 10px;
+}
+.container .row.link-selector li:before {
+  display: none;
+}
+.container .row.link-selector li:after {
+  content: ">";
+  padding-left: 0.4em;
+  vertical-align: middle;
+}
+.container .row.link-selector.active {
+  display: block;
+}
+
+/* SP
+-------------------------------------------------- */
+@media only screen and (max-width: 719px) {
+  .news {
+    margin-top: 30px;
+  }
+
+  .container .row .internal-link-panel {
+    margin-top: 30px;
+    display: block;
+  }
+  .container .row .internal-link-panel li {
+    width: 100%;
+  }
+}
+/* PC
+-------------------------------------------------- */
+
+/*# sourceMappingURL=config.css.map */

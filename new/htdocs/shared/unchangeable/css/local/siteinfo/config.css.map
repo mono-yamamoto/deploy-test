@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAmB;AAOnB;qDACqD;ACRrD;WACY;EAEJ,aAAa,EAAE,iBAAiB;EAChC,UAAU,EAAE,UAAU;;;AAI9B,WAAY;EAEJ,aAAa,EAAE,IAAI;;;ADa3B;qDACqD;AAMrD;qDACqD",
+"sources": ["../../../scss/local/siteinfo/config.scss","../../../scss/local/siteinfo/_gnavi.scss"],
+"names": [],
+"file": "config.css"
+}

@@ -1,0 +1,122 @@
+{
+  "extends": [
+    "markuplint:recommended"
+  ],
+	"plugins":["./plugin.js"],
+	"excludeFiles": ["node_modules/**/*", "**/*.js"],
+	"parser": {
+    "\\.inc$": "@markuplint/html-parser"
+	},
+  "nodeRules": [
+    {
+      "selector": "link[rel='stylesheet']",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "disallowAttrs": [
+              "type"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "selector": "script[type='text/javascript']",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "disallowAttrs": [
+              "type"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "selector": "*[id]",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "disallowAttrs": [
+              {
+                "name": "id",
+                "value": {
+                  "pattern": "/^[a-z]+(?:[A-Z][a-z]*)*$/"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "selector": "svg *[id]",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "disallowAttrs": [
+              "id"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "selector": "svg *[style]",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "disallowAttrs": [
+              "style"
+            ]
+          }
+        }
+      }
+    },
+	
+			{
+				"selector": "head",
+				"rules": {
+					"required-element": [ "meta[name=\"viewport\"][content=\"width=device-width, initial-scale=1\"]"]
+				}
+			}
+		
+  ],
+  "childNodeRules": [
+    {
+      "selector": "svg",
+      "inheritance": true,
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "disallowAttrs": ["class", "style"]
+          }
+        }
+       
+      }
+    }
+  ],
+  "rules": {
+    "attr-value-quotes": "double",
+    "no-boolean-attr-value": true,
+    "invalid-attr": {
+      "options": {
+        "allowAttrs": [
+          {
+            "name": "href",
+            "value": {
+              "pattern": "/^(https://.+|/(?!/)|#)/"
+            }
+          },
+          {
+            "name": "src",
+            "value": {
+              "pattern": "/^(https://.+|/(?!/).+)/"
+            }
+          }
+        ]
+      }
+    }
+
+  }
+}

@@ -1,0 +1,16 @@
+.brand-area div img {
+	width: 100%;
+}
+
+@media only screen and (max-width: 719px) {
+	.brand-area div img:first-child {
+		display: none;
+	}
+	
+}
+@media only screen and (min-width: 720px) {
+	.brand-area div img:last-child {
+		display: none;
+	}
+	
+}

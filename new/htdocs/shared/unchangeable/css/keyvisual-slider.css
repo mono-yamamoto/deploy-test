@@ -1,0 +1,229 @@
+@charset "utf-8";
+/*
+	2018-07-23	#4855 【標準テンプレ追加】トップページ用スライダー
+*/
+
+
+/* 汎用キービジュアル */
+.keyvisual-general{
+    min-height: 28vw;
+    max-height: 28.90625vw;
+    overflow: hidden;
+    background: url(/shared/unchangeable/img/excelcms_load.gif) no-repeat center center;
+}
+
+.keyvisual-general:not(.slick-initialized) .slick-prev, .keyvisual-general:not(.slick-initialized) .slick-next {
+  display: none!important;
+}
+.keyvisual-general.slick-initialized .slick-prev, .keyvisual-general.slick-initialized .slick-next {
+  display: block!important;
+  position: absolute;
+  z-index: 1;
+  width: 43px;
+  height: 66px;
+  border: none;
+  font-size: 0px;
+  background: rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: 0;
+  transition: background ease .3s;
+}
+
+.keyvisual-general.slick-initialized .slick-prev:hover, .keyvisual-general.slick-initialized .slick-next:hover {
+  background: rgba(0, 0, 0, 0.14);
+  transition: background ease .3s;
+}
+
+.keyvisual-general.slick-initialized .slick-prev {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0 4px 4px 0;
+}
+
+.keyvisual-general.slick-initialized .slick-prev::before {
+  position: absolute;
+  content: "";
+  left: 28%;
+  right: 0%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.keyvisual-general.slick-initialized .slick-next {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 4px 0 0 4px;
+}
+
+.keyvisual-general.slick-initialized .slick-next::before {
+  position: absolute;
+  content: "";
+  left: 0%;
+  right: 28%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.keyvisual-general.slick-initialized{
+    background: none;
+}
+
+.keyvisual-general:not(.slick-initialized) > a,
+.keyvisual-general:not(.slick-initialized) > div{
+    display: none;
+}
+.keyvisual-general.slick-initialized > a,
+.keyvisual-general.slick-initialized > div{
+    display: block;
+}
+
+
+.keyvisual-general [class^="text-area__"] {
+	padding: 1vw;
+	box-sizing: border-box;
+}
+
+.keyvisual-general .slick-slide .text-area__center {
+    transform: translate(-50%, -64%);
+    text-align: center;
+}
+.keyvisual-general .slick-slide .text-area__left {
+    transform: translate(-100%, -64%);
+}
+.keyvisual-general .slick-slide .text-area__right {
+    transform: translate(0%, -64%);
+}
+
+.keyvisual-general [class^="text-area__"].text-white {
+    color: #fff;
+    text-shadow: 0 0 .3vw rgba(0,0,0,.8);
+}
+.keyvisual-general [class^="text-area__"].text-black {
+    color: #000;
+    text-shadow: 0 0 .3vw rgba(255,255,255,.8);
+}
+
+.keyvisual-general [class^="text-area__"] .text-area--caption{
+    line-height:1.35;
+    font-weight:bold;
+    font-size: 2.65vw;
+	margin-top: 0;
+	margin-bottom: 1vw;
+}
+.keyvisual-general [class^="text-area__"] .text-area--content {
+    font-size: 1.4vw;
+    font-weight:bold;
+}
+.keyvisual-general [class^="text-area__"] .text-area--content p,
+.keyvisual-general [class^="text-area__"] .text-area--content dl>dt,
+.keyvisual-general [class^="text-area__"] .text-area--content dl>dd,
+.keyvisual-general [class^="text-area__"] .text-area--content ol>li,
+.keyvisual-general [class^="text-area__"] .text-area--content ul>li{
+    line-height:1.35;
+	margin-top: .85vw;
+}
+
+.keyvisual-general [class^="text-area__"] .text-area--content ol>li,
+.keyvisual-general [class^="text-area__"] .text-area--content ul>li{
+	margin-left:1em;
+}
+
+.keyvisual-general .slick-slide > a,
+.keyvisual-general .slick-slide [class^="text-area__"]{
+    display: block;
+}
+.keyvisual-general .slick-slide {
+	position: relative;
+}
+
+.keyvisual-general .slick-slide img:nth-of-type(1){
+	display: block;
+}
+.keyvisual-general .slick-slide img:nth-of-type(2){
+	display: none;
+}
+
+.keyvisual-general .slick-slide [class^="text-area__"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2vw;
+}
+
+.keyvisual-general .slick-slide .text-area__left,
+.keyvisual-general .slick-slide .text-area__center {
+    width: 55%;
+}
+
+.keyvisual-general .slick-slide .text-area__left {
+    left: 65%;
+}
+
+.keyvisual-general .slick-slide .text-area__right {
+    width: 40%;
+}
+
+.keyvisual-general .slick-slide > a:hover img {
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 719px) {
+.keyvisual-general.slick-initialized .slick-prev, .keyvisual-general.slick-initialized .slick-next {
+  display: none!important;
+}
+
+.keyvisual-general{
+    min-height: 92vw;
+    max-height: 97.22222222222222vw;
+}
+.keyvisual-general [class^="text-area__"] * {
+    font-size: 3.33vw;
+}
+.keyvisual-general [class^="text-area__"] .text-area--caption{
+    font-size: 6.29vw;
+}
+
+.keyvisual-general .slick-slide [class^="text-area__"]{
+    top: 50%;
+    left: 50%;
+    width: 80%;
+	transform: translate(-50%, -64%);
+	font-size: 6vw;
+}
+
+.keyvisual-general [class^="text-area__"].text-white {
+    text-shadow: 0 0 1.5vw rgba(0,0,0,.9);
+}
+.keyvisual-general [class^="text-area__"].text-black {
+    text-shadow: 0 0 1.5vw rgba(255,255,255,.9);
+}
+
+.keyvisual-general .slick-slide img:nth-of-type(1){
+	display: none;
+}
+.keyvisual-general .slick-slide img:nth-of-type(2){
+	display: block;
+}
+
+}
+
+

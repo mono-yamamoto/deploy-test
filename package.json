@@ -1,0 +1,24 @@
+{
+  "name": "vite-bun-ssi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:def": "bun run --cwd ./def dev && sleep 5",
+    "start:new": "bun run --cwd ./new dev",
+    "start:both": "run-p start:def start:new",
+    "install:def": "bun install --cwd ./def",
+    "install:new": "bun install --cwd ./new",
+    "vrt":"bunx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^20.12.5"
+  },
+  "dependencies": {
+    "npm-run-all2": "^6.1.2"
+  }
+}

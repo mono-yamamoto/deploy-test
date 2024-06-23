@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="utf-8">
+<title>Grid System | KONICA MINOLTA</title>
+<!-- START OF SmartSource Data Collector TAG -->
+<!--#include virtual="/shared/unchangeable/include/kmgtm_head.inc" -->
+<!-- END OF SmartSource Data Collector TAG -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no,address=no,email=no"> 
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed-120x120.png">
+<meta name="msapplication-TileImage" content="/shared/unchangeable/img/largetile.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta property="og:title" content="Grid System | KONICA MINOLTA" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.konicaminolta.com/aa-en/sample-sitename/grid.html" />
+<meta property="og:image" content="https://www.konicaminolta.com/img/fb_top01.png" />
+<meta property="og:site_name" content="KONICA MINOLTA" />
+<meta property="og:description" content="">
+<link rel="canonical" href="https://www.konicaminolta.com/aa-en/sample-sitename/grid.html"/>
+<!-- ++ local-meta ++ -->
+<!-- +++ /local-meta +++ -->
+<!--#include virtual="/shared/unchangeable/include/head-nofont.inc" -->
+<!--#include virtual="/aa-en/sample-sitename/include/webfont.inc" -->
+<!-- +++ local-script +++ -->
+<link href="/shared/unchangeable/css/local-navigation-light.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet">
+<link href="/shared/unchangeable/css/products-slider.css" rel="stylesheet">
+<link href="/aa-en/shared/css/config.css" rel="stylesheet">
+<!-- +++ /local-script +++ -->
+
+</head>
+
+<body id="top">
+<!-- START OF SmartSource Data Collector TAG -->
+<!--#include virtual="/shared/unchangeable/include/kmgtm_body.inc" -->
+<!-- END OF SmartSource Data Collector TAG -->
+<!--#include virtual="/shared/unchangeable/include/body-start.inc" -->
+<a href="#anchorContents" accesskey="c">Skip to main content</a>
+
+<!--#include virtual="/aa-en/include/header-business.inc" -->
+
+<div class="content-wrapper" id="anchorContents">
+
+<div id="main">
+<main role="main">
+
+<div class="l-header">
+<!--#include virtual="/aa-en/sample-sitename/include/l-header.inc" -->
+<!--#include virtual="/aa-en/sample-sitename/include/l-header-nav.inc" -->
+<!--/l-header--></div>
+<!--#include virtual="/shared/unchangeable/include/maincontent-start.inc" -->
+
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-sm-12">
+<h1 class="h1">Grid System</h1>
+<!-- / .col-lg-12 col-sm-12 --></div>
+<!-- / .row --></div>
+
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 col-sm-12">
+<p>Divided the entire area into 12 grids. Gutters (intervals) of 15px in PC and 5px in SP<sup>*1</sup> are set on both sides of each grid.<br>
+.col-＜Device＞-＜Number of Grids＞ is nested in .row.<br>
+＜Device＞ is "lg" for PC and "sm" for SP.<br>
+＜Number of Grids＞ is from 1 to 12.</p>
+<p>Basically, .row is nested in .container.<br>
+If you set a horizontal belt with background color, please nest .container in .container-fluid.</p>
+<p class="warning"><span>*1</span> SP means "Smart Phone".</p>
+<ul>
+<li class="icn icn-pdf"><a href="/aa-en/sample-sitename/pdf/grid_system_001_en.pdf" target="_blank">Grid SystemSummary (1.1MB)</a></li>
+</ul>
+
+<table class="table">
+<colgroup>
+<col style="width:30%" span="2">
+<col style="width:40%">
+</colgroup>
+<thead>
+<tr>
+<th>Basic Class</th>
+<th>Modifier</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.row</td>
+<td>.row--overflow-visible</td>
+<td>"overflow: hidden;"<br>
+into<br>
+ "overflow: visible;".</td>
+</tr>
+</tbody>
+</table>
+
+<table class="table">
+<colgroup>
+<col style="width:30%" span="2">
+<col style="width:40%">
+</colgroup>
+<thead>
+<tr>
+<th>Basic Class</th>
+<th>Modifier</th>
+<th>What to Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">.col-lg-＜Number of Grids＞</td>
+<td>.col-lg-pull-＜Number of Grids＞</td>
+<td>In reverse order (PC).</td>
+</tr>
+<tr>
+<td>.col-lg-push-＜Number of Grids＞</td>
+<td>In reverse order (PC).</td>
+</tr>
+<tr>
+<td>.col-lg-offset-＜Number of Grids＞</td>
+<td>To offset grid columns (PC).</td>
+</tr>
+<tr>
+<td>.col-sm-＜Number of Grids＞</td>
+<td class="text-center">-</td>
+<td class="text-center">-</td>
+</tr>
+</tbody>
+</table>
+
+<p class="mt-lg-40 mt-sm-40">Samples of the grid system layout follow.</p>
+
+<section>
+<h2 class="h2 h2-bordered-bottom">1 Column Width is 100% in PC and SP</h2>
+<section>
+<h3 class="h3">html</h3>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-12 col-sm-12&quot;&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br>
+&lt;!-- / .col-lg-12 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h3 class="h3"> Result</h3>
+<div class="row">
+<div class="col-lg-12 col-sm-12">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+<!-- / .col-lg-12 col-sm-12 --></div>
+<!-- / .row --></div>
+</section>
+</section>
+
+
+<section>
+<h2 class="h2 h2-bordered-bottom">2 Columns Width is 50% in PC and 100% in SP</h2>
+<section>
+<h3 class="h3">html</h3>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-6 col-sm-12&quot;&gt;<br>
+&lt;p&gt;50% in PC (on the left side), 100% in SP (on the top side).&lt;/p&gt;<br>
+&lt;!-- / .col-lg-6 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-6 col-sm-12&quot;&gt;<br>
+&lt;p&gt;50% in PC (on the right side), 100% in SP (on the bottom side).&lt;/p&gt;<br>
+&lt;!-- / .col-lg-6 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h3 class="h3"> Result</h3>
+<div class="row">
+<div class="col-lg-6 col-sm-12">
+<p>50% in PC (on the left side), 100% in SP (on the top side).</p>
+<!-- / .col-lg-6 col-sm-12 --></div>
+
+<div class="col-lg-6 col-sm-12">
+<p>50% in PC (on the right side), 100% in SP (on the bottom side).</p>
+<!-- / .col-lg-6 col-sm-12 --></div>
+<!-- / .row --></div>
+</section>
+</section>
+
+
+<section>
+<h2 class="h2 h2-bordered-bottom">3 Columns Width is 33% in PC and 100% in SP</h2>
+<section>
+<h3 class="h3">html</h3>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-4 col-sm-12&quot;&gt;<br>
+&lt;p&gt;33% in PC (on the left side), 100% in SP (on the top side).&lt;/p&gt;<br>
+&lt;!-- / .col-lg-4 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-4 col-sm-12&quot;&gt;<br>
+&lt;p&gt;33% in PC (on the middle side), 100% in SP (on the middle side).&lt;/p&lt;/p&gt;<br>
+&lt;!-- / .col-lg-4 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-4 col-sm-12&quot;&gt;<br>
+&lt;p&gt;33% in PC (on the right side), 100% in SP (on the bottom side).&lt;/p&gt;<br>
+&lt;!-- / .col-lg-4 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h3 class="h3">Result</h3>
+<div class="row">
+<div class="col-lg-4 col-sm-12">
+<p>33% in PC (on the left side), 100% in SP (on the top side).</p>
+<!-- / .col-lg-4 col-sm-12 --></div>
+
+<div class="col-lg-4 col-sm-12">
+<p>33% in PC (on the middle side), 100% in SP (on the middle side).</p>
+<!-- / .col-lg-4 col-sm-12 --></div>
+
+<div class="col-lg-4 col-sm-12">
+<p>33% in PC (on the right side), 100% in SP (on the bottom side).</p>
+<!-- / .col-lg-4 col-sm-12 --></div>
+<!-- / .row --></div>
+</section>
+</section>
+
+
+<section>
+<h2 class="h2 h2-bordered-bottom">Reverse the Order in PC</h2>
+<section>
+<h3 class="h3">html</h3>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-4 col-lg-push-8 col-sm-12&quot;&gt;<br>
+&lt;p&gt;33% in PC (on the right side), 100% in SP (on the top side).&lt;/p&gt;<br>
+&lt;!-- / .col-lg-4 col-lg-push-8 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-8 col-lg-pull-4 col-sm-12&quot;&gt;<br>
+&lt;p&gt;66% in PC (on the left side), 100% in SP (on the bottom side).&lt;/p&gt;<br>
+&lt;!-- / .col-lg-8 col-lg-pull-4 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h3 class="h3">Result</h3>
+<div class="row">
+<div class="col-lg-4 col-lg-push-8 col-sm-12">
+<p>33% in PC (on the right side), 100% in SP (on the top side).</p>
+<!-- / .col-lg-4 col-lg-push-8 col-sm-12 --></div>
+
+<div class="col-lg-8 col-lg-pull-4 col-sm-12">
+<p>66% in PC (on the left side), 100% in SP (on the bottom side).</p>
+<!-- / .col-lg-8 col-lg-pull-4 col-sm-12 --></div>
+<!-- / .row --></div>
+</section>
+</section>
+
+
+
+<section>
+<h2 class="h2 h2-bordered-bottom">Offset</h2>
+<p>In PC, by adding "offset" to "col", it can set left margin  of the specified number of grids.</p>
+<section>
+<h3 class="h3">html</h3>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-10 col-lg-offset-1 col-sm-12&quot;&gt;<br>
+&lt;p&gt;Offseting a grid column. 10 grid columns in PC, 12 grid columns in SP.&lt;br&gt;<br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-10 col-lg-offset-1 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!--/ .row--&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h3 class="h3"> Result</h3>
+<div class="row">
+<div class="col-lg-10 col-lg-offset-1 col-sm-12">
+<p>Offseting a grid column. 10 grid columns in PC, 12 grid columns in SP.<br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- / .col-lg-10 col-lg-offset-1 col-sm-12 --></div>
+<!--/ .row--></div>
+</section>
+</section>
+
+
+
+<section>
+<h2 class="h2 h2-bordered-bottom">Nest</h2>
+<p>To set nest in grids, it can for only one level. In the specification, it can be set in any number of level. However, if it in many levels it becomes too paricular, for operation it is limited to one level.</p>
+
+<section>
+<h3 class="h3">html</h3>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-12 col-sm-12&quot;&gt;<br>
+&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-9 col-sm-12&quot;&gt;<br>
+&lt;p&gt;9/12 grid columns&lt;/p&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-3 col-sm-12&quot;&gt;<br>
+&lt;p&gt;One　level nest.&lt;br&gt;<br>
+3/12 grid columns (2.25/12 grid columns against the pareant element).&lt;/p&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-12&quot;&gt;<br>
+&lt;p&gt;3/12 grid columns&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-12&quot;&gt;<br>
+&lt;p&gt;3/12 grid columns&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-12&quot;&gt;<br>
+&lt;p&gt;3/12 grid columns&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;<br>
+&lt;!-- / .col-lg-9 col-sm-12 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-12&quot;&gt;<br>
+&lt;p&gt;3/12カラム&lt;br&gt;<br>
+右ナビなどの要素&lt;/p&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;<br>
+&lt;!-- / .col-lg-12 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!--/ .row--&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h3 class="h3"> Result</h3>
+
+<div class="row">
+<div class="col-lg-12 col-sm-12">
+<div class="row">
+<div class="col-lg-9 col-sm-12">
+<p>9/12 grid columns</p>
+
+<div class="row">
+<div class="col-lg-3 col-sm-12">
+<p>One　level nest.<br>
+3/12 grid columns (2.25/12 grid columns against the pareant element).</p>
+<!-- / .col-lg-3 col-sm-12 --></div>
+
+<div class="col-lg-3 col-sm-12">
+<p>3/12 grid columns</p>
+<!-- / .col-lg-3 col-sm-12 --></div>
+
+<div class="col-lg-3 col-sm-12">
+<p>3/12 grid columns</p>
+<!-- / .col-lg-3 col-sm-12 --></div>
+
+<div class="col-lg-3 col-sm-12">
+<p>3/12 grid columns</p>
+<!-- / .col-lg-3 col-sm-12 --></div>
+<!-- / .row --></div>
+<!-- / .col-lg-9 col-sm-12 --></div>
+
+<div class="col-lg-3 col-sm-12">
+<p>3/12 grid columns</p>
+<!-- / .col-lg-3 col-sm-12 --></div>
+<!-- / .row --></div>
+<!-- / .col-lg-12 col-sm-12 --></div>
+<!--/ .row--></div>
+</section>
+
+<section>
+<h3 class="h3 h3-indent">Nest and Offset</h3>
+<section>
+<h4 class="h4">html</h4>
+<div class="card bg-444444">
+<p class=" text-ffffff mt-lg-0 mt-sm-0">&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-10 col-lg-offset-1 col-sm-12&quot;&gt;<br>
+&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-3 col-sm-6&quot;&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-6 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-6&quot;&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-6 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-6&quot;&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-6 --&gt;&lt;/div&gt;</p>
+<p class=" text-ffffff">&lt;div class=&quot;col-lg-3 col-sm-6&quot;&gt;<br>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;<br>
+&lt;!-- / .col-lg-3 col-sm-6 --&gt;&lt;/div&gt;<br>
+&lt;!-- / .row --&gt;&lt;/div&gt;<br>
+&lt;!-- / .col-lg-10 col-lg-offset-1 col-sm-12 --&gt;&lt;/div&gt;<br>
+&lt;!--/ .row--&gt;&lt;/div&gt;</p>
+<!-- / .card card-code --></div>
+</section>
+
+<section>
+<h4 class="h4">Result</h4>
+<div class="row">
+<div class="col-lg-10 col-lg-offset-1 col-sm-12">
+<div class="row">
+<div class="col-lg-3 col-sm-6">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- / .col-lg-3 col-sm-6 --></div>
+
+<div class="col-lg-3 col-sm-6">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- / .col-lg-3 col-sm-6 --></div>
+
+<div class="col-lg-3 col-sm-6">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- / .col-lg-3 col-sm-6 --></div>
+
+<div class="col-lg-3 col-sm-6">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- / .col-lg-3 col-sm-6 --></div>
+<!-- / .row --></div>
+<!-- / .col-lg-10 col-lg-offset-1 col-sm-12 --></div>
+<!--/ .row--></div>
+</section>
+</section>
+</section>
+<!-- / .col-lg-8 col-lg-offset-2 col-sm-12 --></div>
+<!-- / .row --></div>
+
+<!-- / .container --></div>
+
+<!--#include virtual="/shared/unchangeable/include/maincontent-end.inc" -->
+
+
+</main>
+<!--/#main--></div>
+
+<nav role="navigation" class="breadcrumb breadcrumb-footer">
+<ul>
+<li><a href="/aa-en/sample-sitename/index.html">Home</a></li>
+<li>Grid System</li>
+</ul>
+<!-- / .breadcrumb --></nav>
+
+
+<!--#include virtual="/aa-en/sample-sitename/include/footer-link-search.inc" -->
+<!--#include virtual="/aa-en/include/footer-industrieslink-business.inc" -->
+<!--#include virtual="/aa-en/sample-sitename/include/footer-copyright.inc" -->
+
+<!--/content-wrapper--></div>
+<!-- include virtual="/shared/unchangeable/include/footer_js.inc" -->
+<script src="/shared/unchangeable/js/jquery-2.2.4.min.js"></script>
+<script src="/shared/unchangeable/js/jquery.smoothScroll.js"></script>
+<script src="/shared/unchangeable/js/headerfooter.js"></script>
+
+<script src="/shared/unchangeable/js/local-navigation.js"></script>
+<script src="/shared/unchangeable/js/local-navigation-light.js"></script>
+
+
+<!--#include virtual="/shared/unchangeable/include/body-end.inc" -->
+</body>
+</html>

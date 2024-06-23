@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none!important
+}
+
+.ngReady {
+  position: relative;
+  height: auto;
+  max-height: 6em;
+  min-height: 6em;
+  overflow: visible;
+}
+.ngReady.ctSelector {
+	overflow: hidden;
+}
+
+.brand-area .ngReady:not(.ngStart) {
+  max-height: 0;
+  min-height: 0;
+}
+
+.ngReady>:not(.ngLoading) {
+  visibility: hidden;
+}
+
+.ngStart {
+  max-height: 160em;
+  transition: max-height ease-in .7s;
+}
+
+.ngStart>:not(.ngLoading) {
+  visibility: visible;
+}
+
+.ngLoading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 64px!important;
+  margin-top: 10px;
+  display: block!important;
+  text-align: center!important;
+  vertical-align: middle!important;
+  margin: auto;
+}
+
+.news .row h2 {
+  display: none;
+}
+
+.news .row h2.active {
+  display: block;
+}
+
+.news-list {
+  background: none;
+}
+
+.news-list.active {
+  background: #fff;
+}
+
+.brand-area:not(prc) .slick-prev, .brand-area:not(prc) .slick-next {
+  display: none!important;
+}
+.brand-area.prc .slick-prev, .brand-area.prc .slick-next {
+  display: block!important;
+  position: absolute;
+  z-index: 1;
+  width: 43px;
+  height: 66px;
+  border: none;
+  font-size: 0px;
+  background: rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: 0;
+  transition: background ease .3s;
+}
+
+.brand-area.prc .slick-prev:hover, .brand-area.prc .slick-next:hover {
+  background: rgba(0, 0, 0, 0.14);
+  transition: background ease .3s;
+}
+
+.brand-area.prc .slick-prev {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0 4px 4px 0;
+}
+
+.brand-area.prc .slick-prev::before {
+  position: absolute;
+  content: "";
+  left: 28%;
+  right: 0%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.brand-area.prc .slick-next {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 4px 0 0 4px;
+}
+
+.brand-area.prc .slick-next::before {
+  position: absolute;
+  content: "";
+  left: 0%;
+  right: 28%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/*
+@media only screen and (max-width: 719px) {
+*/
+
+.brand-area.smp .slick-prev, .brand-area.smp .slick-next {
+  display: none!important;
+}
+
+.brand-area.smp.smpRun::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 20%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  background-image: url(/shared/unchangeable/img/bg_keyvisual_arrow_sp.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90%;
+  border-radius: 8px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: ba-fadeOut 2s 1 ease;
+  animation: ba-fadeOut 2s 1 ease;
+}
+
+/* アニメーション定義 */
+@-webkit-keyframes ba-fadeOut {
+  0% {
+    opacity: 0;
+    z-index: 1;
+  }
+  6% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+
+@keyframes ba-fadeOut {
+  0% {
+    opacity: 0;
+    z-index: 1;
+  }
+  6% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+
+.ngInvestors .date-list:not(.ngActive){
+	visibility: hidden;
+	opacity:0;
+}
+.ngInvestors .date-list.ngActive{
+	-webkit-animation: anime1 .2s ease 1;
+	animation: anime1 .2s ease 1;
+}
+@keyframes anime1 {
+	0% {visibility: visible;opacity:0;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes anime1 {
+	0% {visibility: visible;opacity:0;}
+	100% {opacity:1;}
+}
+
+/*
+}
+*/

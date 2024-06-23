@@ -1,0 +1,31 @@
+<svg id="icon_header_global.svg" xmlns="http://www.w3.org/2000/svg" width="66.37" height="47" viewBox="0 0 66.37 47">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #484848;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-3 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <circle id="楕円形_564" data-name="楕円形 564" class="cls-1" cx="32.87" cy="23.5" r="20"/>
+  <g id="グループ_6" data-name="グループ 6">
+    <path id="楕円形_564-2" data-name="楕円形 564" class="cls-2" d="M2379.81,38a22,22,0,1,1-22.19,22A22.093,22.093,0,0,1,2379.81,38Z" transform="translate(-2337.13 -36.5)"/>
+    <path id="楕円形_564-3" data-name="楕円形 564" class="cls-2" d="M2360.81,38a22,22,0,1,1-22.18,22A22.093,22.093,0,0,1,2360.81,38Z" transform="translate(-2337.13 -36.5)"/>
+    <rect id="長方形_579" data-name="長方形 579" class="cls-3" x="12.87" y="22.5" width="42" height="3"/>
+    <rect id="長方形_579-2" data-name="長方形 579" class="cls-3" x="12.87" y="31.5" width="42" height="3"/>
+    <rect id="長方形_579-3" data-name="長方形 579" class="cls-3" x="12.87" y="12.5" width="42" height="3"/>
+    <rect id="長方形_579-4" data-name="長方形 579" class="cls-3" x="31.87" y="2.5" width="3" height="42"/>
+  </g>
+</svg>

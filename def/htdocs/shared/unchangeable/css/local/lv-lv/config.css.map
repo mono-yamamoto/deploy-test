@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAmB;AAOnB;qDACqD;ACNnD,oDAA6B;EAE3B,SAAS,EAAE,MAAM;;;ADmBrB;qDACqD;AAMrD;qDACqD",
+"sources": ["../../../scss/local/lv-lv/config.scss","../../../scss/local/lv-lv/_media-query.scss"],
+"names": [],
+"file": "config.css"
+}

@@ -1,0 +1,282 @@
+/* stylelint-disable property-no-vendor-prefix */
+/* stylelint-disable selector-class-pattern */
+@charset "utf-8";
+
+/*
+	2018-07-23	#4855 【標準テンプレ追加】トップページ用スライダー
+*/
+
+/* 汎用キービジュアル */
+.keyvisual-splide-general {
+	min-height: 28vw;
+	max-height: 28.91vw;
+	overflow: hidden;
+	background: url(/shared/unchangeable/img/excelcms_load.gif) no-repeat center
+		center;
+}
+
+.keyvisual-splide-general .splide__arrow {
+	opacity: 1;
+}
+
+.splide.is-initialized:not(.is-initialized) {
+	visibility: hidden;
+}
+
+.splide.is-initialized:not(.is-initialized) > div {
+	display: none;
+}
+
+.keyvisual-splide-general.is-initialized .splide__arrow--next {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 4px 0 0 4px;
+}
+
+.keyvisual-splide-general.is-initialized .splide__arrow--prev {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 0 4px 4px 0;
+}
+
+.keyvisual-splide-general.is-initialized .splide__arrow--prev,
+.keyvisual-splide-general.is-initialized .splide__arrow--next {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	width: 43px;
+	height: 66px;
+	font-size: 0;
+	cursor: pointer;
+	background: rgb(0 0 0 / 24%);
+	border: none;
+	outline: 0;
+	transition: background ease 0.3s;
+}
+
+.keyvisual-splide-general.is-initialized .splide__arrow--prev:hover,
+.keyvisual-splide-general.is-initialized .splide__arrow--next:hover {
+	background: rgb(0 0 0 / 14%);
+	transition: background ease 0.3s;
+}
+
+.keyvisual-splide-general.is-initialized .splide__arrow--prev::before {
+	position: absolute;
+	inset: 0 0% 0 28%;
+	width: 14px;
+	height: 14px;
+	margin: auto;
+	content: "";
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transform: rotate(45deg);
+}
+
+.keyvisual-splide-general.is-initialized .splide__arrow--next::before {
+	position: absolute;
+	inset: 0 28% 0 0%;
+	width: 14px;
+	height: 14px;
+	margin: auto;
+	content: "";
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+}
+
+.keyvisual-splide-general [class^="text-area__"] {
+	box-sizing: border-box;
+	padding: 1vw;
+}
+
+.keyvisual-splide-general .splide__slide [class^="text-area__"] {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 2vw;
+}
+
+.keyvisual-splide-general .splide__slide .text-area__center {
+	text-align: center;
+	transform: translate(-50%, -64%);
+}
+
+.keyvisual-splide-general .splide__slide .text-area__left {
+	left: 65%;
+	transform: translate(-100%, -64%);
+}
+
+.keyvisual-splide-general .splide__slide .text-area__right {
+	width: 40%;
+	transform: translate(0%, -64%);
+}
+
+.keyvisual-splide-general [class^="text-area__"].text-white {
+	color: #fff;
+	text-shadow: 0 0 0.3vw rgb(0 0 0 / 80%);
+}
+
+.keyvisual-splide-general [class^="text-area__"].text-black {
+	color: #000;
+	text-shadow: 0 0 0.3vw rgb(255 255 255 / 80%);
+}
+
+.keyvisual-splide-general [class^="text-area__"] .text-area--caption {
+	margin-top: 0;
+	margin-bottom: 1vw;
+	font-size: 2.65vw;
+	font-weight: bold;
+	line-height: 1.35;
+}
+
+.keyvisual-splide-general [class^="text-area__"] .text-area--content {
+	font-size: 1.4vw;
+	font-weight: bold;
+}
+
+.keyvisual-splide-general [class^="text-area__"] .text-area--content p,
+.keyvisual-splide-general [class^="text-area__"] .text-area--content dl > dt,
+.keyvisual-splide-general [class^="text-area__"] .text-area--content dl > dd,
+.keyvisual-splide-general [class^="text-area__"] .text-area--content ol > li,
+.keyvisual-splide-general [class^="text-area__"] .text-area--content ul > li {
+	margin-top: 0.85vw;
+	line-height: 1.35;
+}
+
+.keyvisual-splide-general [class^="text-area__"] .text-area--content ol > li,
+.keyvisual-splide-general [class^="text-area__"] .text-area--content ul > li {
+	margin-left: 1em;
+}
+
+.keyvisual-splide-general .splide__slide > a,
+.keyvisual-splide-general .splide__slide [class^="text-area__"] {
+	display: block;
+}
+
+.keyvisual-splide-general .splide__slide {
+	position: relative;
+}
+
+.keyvisual-splide-general .splide__slide img:nth-of-type(1) {
+	display: block;
+}
+
+.keyvisual-splide-general .splide__slide img:nth-of-type(2) {
+	display: none;
+}
+
+.keyvisual-splide-general .splide__slide .text-area__left,
+.keyvisual-splide-general .splide__slide .text-area__center {
+	width: 55%;
+}
+
+.keyvisual-splide-general .splide__slide > a:hover img {
+	opacity: 1;
+}
+
+@media only screen and (width <= 719px) {
+	.keyvisual-splide-general.is-initialized .splide__arrow--prev,
+	.keyvisual-splide-general.is-initialized .splide__arrow--next {
+		display: none;
+	}
+
+	.keyvisual-splide-general {
+		min-height: 92vw;
+		max-height: 97.22vw;
+	}
+
+	.keyvisual-splide-general [class^="text-area__"] * {
+		font-size: 3.33vw;
+	}
+
+	.keyvisual-splide-general [class^="text-area__"] .text-area--caption {
+		font-size: 6.29vw;
+	}
+
+	.keyvisual-splide-general .splide__slide [class^="text-area__"] {
+		top: 50%;
+		left: 50%;
+		width: 80%;
+		font-size: 6vw;
+		transform: translate(-50%, -64%);
+	}
+
+	.keyvisual-splide-general [class^="text-area__"].text-white {
+		text-shadow: 0 0 1.5vw rgb(0 0 0 / 90%);
+	}
+
+	.keyvisual-splide-general [class^="text-area__"].text-black {
+		text-shadow: 0 0 1.5vw rgb(255 255 255 / 90%);
+	}
+
+	.keyvisual-splide-general .splide__slide img:nth-of-type(1) {
+		display: none;
+	}
+
+	.keyvisual-splide-general .splide__slide img:nth-of-type(2) {
+		display: block;
+	}
+}
+
+.splide__controls {
+	position: absolute;
+	inset-inline: 0;
+	bottom: 20px;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.splide__pagination {
+	position: revert;
+	gap: 20px;
+}
+
+.splide__pagination__page {
+	width: 10px;
+	height: 10px;
+	background: #dbdbdb;
+	border-radius: 50%;
+	opacity: 1;
+
+	&.is-active {
+		background: #06c;
+		border: 1px solid #333;
+	}
+}
+
+.splide__toggle {
+	display: grid;
+	place-items: center;
+	width: 25px;
+	height: 25px;
+	text-indent: -9999px;
+	-webkit-appearance: none;
+	appearance: none;
+	background: rgb(119 119 119 / 60%);
+	border: none;
+	border-radius: 50%;
+}
+
+.splide__toggle.is-active {
+	.splide__toggle__pause {
+		width: 6px;
+		height: 12px;
+		border-block: none;
+		border-inline: 3px solid #fff;
+	}
+}
+
+.splide__toggle__play {
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	border-color: transparent transparent transparent #fff;
+	border-style: solid;
+	border-width: 7px 0 7px 8px;
+}

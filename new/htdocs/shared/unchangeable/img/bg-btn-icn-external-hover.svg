@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #06c;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="bg-btn-icn-external-hover.svg" class="cls-1" d="M1100,163v-2h-3v-9h12v2h3v9h-12Zm8-10h-10v7h2v-6h8v-1Zm3,2h-10v7h10v-7Z" transform="translate(-1097 -152)"/>
+</svg>

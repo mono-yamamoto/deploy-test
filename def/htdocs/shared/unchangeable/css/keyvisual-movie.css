@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* videoキービジュアル */
+.keyvisual_video{
+ 	width:100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	
+    min-height: 28vw;
+    background: url(/shared/unchangeable/img/excelcms_load.gif) no-repeat center center;
+}
+
+.keyvisual_video > *{
+	visibility: hidden;
+}
+
+.keyvisual_video.active{
+	background: none;
+}
+
+.keyvisual_video.active > *{
+	visibility: visible;
+}
+
+.keyvisual_video video{
+ 	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+ }
+ 
+ .keyvisual_video ._ttl{
+ 	position: relative;
+	display: table;
+	width: auto;
+	height: auto;
+	text-align: center;
+	max-width: 80%;
+	max-height: 90%;
+	padding: 4px 15px;
+	
+ }
+.keyvisual_video ._ttl *{
+  	color: #fff;
+}
+.keyvisual_video ._ttl h1,
+.keyvisual_video ._ttl .h1{
+ 	font-size: 4rem;
+	line-height: 1.2;
+	font-weight: bold;
+}
+.keyvisual_video ._ttl ._play{
+	display: block;
+	width: 80px;
+	height: 80px;
+	font-size: 0rem;
+	margin: auto auto 8px auto;
+	background: #4d4d4d;
+	border-radius: 40px;
+	margin-top: 12px;
+	cursor: pointer;
+	transition: all .3s ease;
+	position: relative;
+}
+.keyvisual_video ._ttl ._play:hover{
+	background-color: #0066cc;
+}
+
+.keyvisual_video ._ttl ._play:after{
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+	border-width: 25px 0 25px 38px;
+	position: absolute;
+	top: 15px;
+	left: 25px;
+}
+
+.keyvisual_pause{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+    color: transparent;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-top: none;
+    border-bottom: none;
+    outline: none;
+    margin: -1px 0 0 0;
+}
+
+
+.keyvisual_pause.paused{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 8px;
+    border-color: transparent transparent transparent #ffffff;
+    margin: -2px 0 0 0;
+}
+ 
+@media only screen and (max-width: 719px){
+
+ .keyvisual_video video{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+ }
+
+ }
+ 
+ 
+ 
+ /*
+ 	modal-video.css
+ */
+ @keyframes modal-video {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes modal-video-inner {
+  from {
+    transform: translate(0, 100px); }
+  to {
+    transform: translate(0, 0); } }
+.modal-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1000000;
+  cursor: pointer;
+  opacity: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal-video;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out; }
+
+.modal-video-close {
+  opacity: 0; }
+  .modal-video-close .modal-video-movie-wrap {
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px); }
+
+.modal-video-body {
+  max-width: 970px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: table;
+  transition: padding .3s ease;
+  }
+
+.modal-video-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%; }
+
+.modal-video-movie-wrap {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  background-color: #333;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal-video-inner;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out; }
+  .modal-video-movie-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.modal-video-close-btn {
+  position: absolute;
+  z-index: 2;
+  top: -40px;
+  right: -40px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  cursor: pointer; }
+  .modal-video-close-btn:before {
+    transform: rotate(45deg); }
+  .modal-video-close-btn:after {
+    transform: rotate(-45deg); }
+  .modal-video-close-btn:before, .modal-video-close-btn:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: #000;
+    border-radius: 5px;
+    margin-top: -6px; }
+
+
+._brightcove_modal:not(.ready){
+	position: absolute;
+	z-index: -1;
+	width: 970px;
+	height: auto;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+._brightcove_modal.ready{
+	opacity: 1;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+	outline : none;
+	transition: opacity .6s ease;
+}
+._brightcove_modal .modal-video-inner{
+	position: relative;
+}
+._brightcove_modal .modal-video-inner .modal-video-wrapper{
+	position: relative;
+	display: block;
+	max-width: 100%;
+}
+
+._brightcove_modal .modal-video-inner .modal-video-close-btn{
+	right: -10px;
+	top: -50px;
+	outline : none;
+}
+
+@media only screen and (min-width: 1020px) {
+._brightcove_modal .modal-video-wrapper{
+	padding: 0;
+}
+}
+
+@media only screen and (max-width: 1079px) {
+._brightcove_modal .modal-video-inner .modal-video-close-btn{
+	right: 0px;
+}
+._brightcove_modal .modal-video-wrapper{
+	width: 90%;
+	margin: auto;
+}
+}
+
+@media only screen and (max-width: 719px) {
+._brightcove_modal .modal-video-wrapper{
+	width: 100%;
+}
+._brightcove_modal .modal-video-inner .modal-video-close-btn{
+	right: 10px;
+}
+
+}
+
+
+@media only screen and (max-width: 1079px) {
+  :not(._brightcove_modal) .modal-video-close-btn {
+    right: 2px; }
+}
+/*
+@media only screen and (max-width: 767px) {
+  .modal-video-movie-wrap {
+    margin-top: -10%; }
+}
+*/
+
+

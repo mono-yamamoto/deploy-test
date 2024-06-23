@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none!important
+}
+
+.ngReady {
+  position: relative;
+  height: auto;
+  min-height: 10em;
+  overflow: visible;
+}
+.ngReady.ctSelector {
+	overflow: hidden;
+}
+
+.ngReady>:not(.ngLoading) {
+  visibility: hidden;
+}
+
+.ngStart {
+  max-height: 160em;
+  transition: max-height ease-in .7s;
+}
+
+.ngStart>:not(.ngLoading) {
+  visibility: visible;
+}
+
+.ngLoading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  	margin: auto;
+	background: url(/shared/unchangeable/img/excelcms_load.gif) no-repeat center center;
+}
+
+.ng-scope .no-active,
+.ng-scope .event{
+	display: none!important;
+}
+
+#main {
+	position: relative;
+}
+.ajax-base{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.15) url(/shared/unchangeable/img/excelcms_load.gif) no-repeat center center;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+.seemore-view-next,
+.seemore-view-link{
+	display: none;
+}
+.seemore-view-next.active,
+.seemore-view-link.active{
+	display: inherit;
+}
+
+/* アニメーション定義 */
+.newsroom-release-list:not(.ngActive){
+	visibility: hidden;
+	opacity:0;
+}
+.newsroom-release-list.ngActive{
+	-webkit-animation: anime1 .3s ease 1;
+	animation: anime1 .3s ease 1;
+}
+@keyframes anime1 {
+	0% {visibility: visible;opacity:0;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes anime1 {
+	0% {visibility: visible;opacity:0;}
+	100% {opacity:1;}
+}

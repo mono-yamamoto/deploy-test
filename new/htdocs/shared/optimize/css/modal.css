@@ -1,0 +1,84 @@
+/* modal helper */
+
+body:has([open]) {
+	overflow: hidden;
+	scrollbar-gutter: stable;
+
+	> header,
+	> div,
+	> main,
+	> footer,
+	> aside,
+	.l-header[style*="position: fixed;"] {
+		overflow: auto;
+		scrollbar-gutter: stable;
+	}
+}
+
+dialog {
+	border: none;
+}
+
+dialog:has(.modal-content, .modal-content) {
+	width: 100%;
+	background-color: transparent;
+}
+
+dialog[open]::backdrop {
+	background-color: rgb(0 0 0 / 50%);
+	animation: show-backdrop 0.3s;
+}
+
+dialog.hide::backdrop {
+	animation: hide-backdrop 0.5s ease 0.2s normal;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show-backdrop {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hide-backdrop {
+	to {
+		opacity: 0;
+	}
+}
+
+dialog[open] {
+	animation: show 0.4s ease normal;
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+dialog.hide {
+	animation: hide 0.4s ease normal;
+	animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+	from {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(-30%);
+	}
+}

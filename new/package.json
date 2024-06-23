@@ -1,0 +1,49 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "npm run format-js-css & npm run format-html",
+    "format-html": "js-beautify -r \"./**/*.html\"",
+    "format-inc": "js-beautify -r \"./**/*.inc\"",
+    "format-js-css": "prettier -w \"./**/*.{css,js}\"",
+    "grooming": "npm run lint & npm run format",
+    "lint": "npm run lint-js & npm run lint-css & npm run lint-html",
+    "lint-css": "stylelint \"./htdocs/**/*.css\"",
+    "lint-html": "markuplint --locale ja --format Simple \"./htdocs/**/*.html\"",
+    "lint-inc": "markuplint --locale ja --format Simple \"./htdocs/**/*.inc\"",
+    "lint-js": "eslint  \"./htdocs/**/*.js\"",
+    "lint-report": "eslint \"./htdocs/**/*.{js,jsx}\" --no-color -o report/eslint-report.txt & stylelint \"./htdocs/**/*.css\" -f verbose --no-color -o report/stylelint-report.txt & markuplint \"htdocs/**/*.html\" --locale ja -f Simple --no-color > report/markuplint-report.txt  2>&1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^8.57.0",
+    "@server-side-include/vite-plugin": "^2.0.3",
+    "axe-core": "^4.9.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-editorconfig": "^4.0.3",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.1",
+    "eslint-plugin-no-unsanitized": "^4.0.2",
+    "eslint-plugin-security": "^2.1.1",
+    "js-beautify": "^1.15.1",
+    "markuplint": "^4.3.0",
+    "prettier": "^3.2.5",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-no-unsupported-browser-features": "^8.0.1",
+    "stylelint-prettier": "^5.0.0"
+  }
+}
